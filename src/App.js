@@ -54,7 +54,7 @@ function App() {
     socket.on("dataBack", (data) => {
       setAllChat((list) => [...list, data]);
     });
-  }, [socket]);
+  }, []);
 
   ///join notification///
   useEffect(() => {
@@ -111,8 +111,9 @@ function App() {
           </h1>
           <div className="chat-box">
             <ScrollToBottom className="scroll">
-              {allChat.map((message) => (
+              {allChat.map((message, index) => (
                 <div
+                  key={index}
                   className={
                     name !== message.author ? "message-item" : "item-author"
                   }

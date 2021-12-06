@@ -5,7 +5,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 import { AiFillMessage } from "react-icons/ai";
 import SnackBar from "./SnackBar";
 
-const socket = io.connect("http://localhost:4001");
+const socket = io.connect("https://nodejsserver2021.herokuapp.com/");
 
 function App() {
   //STATE//
